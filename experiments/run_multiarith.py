@@ -14,16 +14,16 @@ import random
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 sys.stdout.reconfigure(encoding='utf-8')
 
-from AgentPrune.utils.const import AgentPrune_ROOT
-from AgentPrune.graph.graph import Graph
-from AgentPrune.tools.reader.readers import JSONReader, JSONLReader
-from AgentPrune.utils.globals import Time
-from AgentPrune.utils.globals import Cost, PromptTokens, CompletionTokens
-from AgentPrune.utils.utils import nuclear_norm,frobenius_norm
+from AgentDropout.utils.const import AgentPrune_ROOT
+from AgentDropout.graph.graph import Graph
+from AgentDropout.tools.reader.readers import JSONReader, JSONLReader
+from AgentDropout.utils.globals import Time
+from AgentDropout.utils.globals import Cost, PromptTokens, CompletionTokens
+from AgentDropout.utils.utils import nuclear_norm,frobenius_norm
 from datasets.gsm8k_dataset import svamp_data_process,gsm_get_predict, gsm_data_process,multiarith_data_process
 from datasets.aqua_dataset import aqua_data_process,aqua_get_predict
-from AgentPrune.utils.globals import PromptTokens, CompletionTokens
-from AgentPrune.agents.agent_registry import AgentRegistry
+from AgentDropout.utils.globals import PromptTokens, CompletionTokens
+from AgentDropout.agents.agent_registry import AgentRegistry
 
 def load_result(result_file):
     if not result_file.exists():
