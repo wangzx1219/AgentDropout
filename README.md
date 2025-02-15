@@ -1,6 +1,8 @@
 # AgentDropout
 
+We propose **AgentDropout**, a novel topology optimization method for Multi-agent system with domain transferability and structure robustness. AgentDropout dynamically adjusts the participating agents and communication links among agents in each round, allowing for more flexible and adaptive team configurations. 
 
+![main](image\README\main.png)
 
 ## Qucik Start
 
@@ -37,18 +39,17 @@ Download MMLU, AQuA, MultiArith, SVAMP, HumanEval and GSM8K datasets from [Huggi
 **Run AgentDropout**
 
 ```shell
-python experiments/run_mmlu.py --agent_nums 5 --mode Random --batch_size 40 --num_iterations 10 --imp_per_iterations 5 --pruning_rate 0.20 --num_rounds 2 --llm_name /path/to/model --optimized_spatial --optimized_temporal --diff --dec
+python experiments/run_mmlu.py --agent_nums 5 --mode FullConnected --batch_size 40 --num_iterations 2 --imp_per_iterations 1 --pruning_rate 0.20 --num_rounds 2 --llm_name /path/to/model --optimized_spatial --optimized_temporal --diff --dec
 
-python experiments/run_gsm8k.py --agent_nums 5 --mode Random --batch_size 40 --num_iterations 2 --imp_per_iterations 1 --pruning_rate 0.20 --num_rounds 2 --llm_name /path/to/model --optimized_spatial --optimized_temporal --diff --dec
+python experiments/run_gsm8k.py --agent_nums 5 --mode FullConnected --batch_size 40 --num_iterations 2 --imp_per_iterations 1 --pruning_rate 0.20 --num_rounds 2 --llm_name /path/to/model --optimized_spatial --optimized_temporal --diff --dec
 
-python experiments/run_aqua.py --agent_nums 5 --mode Random --batch_size 40 --num_iterations 2 --imp_per_iterations 1 --pruning_rate 0.20 --num_rounds 2 --llm_name /path/to/model --optimized_spatial --optimized_temporal --diff --dec
+python experiments/run_aqua.py --agent_nums 5 --mode FullConnected --batch_size 40 --num_iterations 2 --imp_per_iterations 1 --pruning_rate 0.20 --num_rounds 2 --llm_name /path/to/model --optimized_spatial --optimized_temporal --diff --dec
 
-python experiments/run_multiarith.py --agent_nums 5 --mode Random --batch_size 60 --num_iterations 2 --imp_per_iterations 1 --pruning_rate 0.20 --num_rounds 2 --llm_name /path/to/model --optimized_spatial --optimized_temporal --diff --dec
+python experiments/run_multiarith.py --agent_nums 5 --mode FullConnected --batch_size 60 --num_iterations 2 --imp_per_iterations 1 --pruning_rate 0.20 --num_rounds 2 --llm_name /path/to/model --optimized_spatial --optimized_temporal --diff --dec
 
-python experiments/run_svamp.py --agent_nums 5 --mode Random --batch_size 60 --num_iterations 2 --imp_per_iterations 1 --pruning_rate 0.20 --num_rounds 2 --llm_name /path/to/model --optimized_spatial --optimized_temporal --diff --dec
+python experiments/run_svamp.py --agent_nums 5 --mode FullConnected --batch_size 60 --num_iterations 2 --imp_per_iterations 1 --pruning_rate 0.20 --num_rounds 2 --llm_name /path/to/model --optimized_spatial --optimized_temporal --diff --dec
 
-python experiments/run_humaneval.py --agent_nums 5 --mode Random --batch_size 10 --num_iterations 10 --imp_per_iterations 5 --pruning_rate 0.20 --num_rounds 4 --llm_name /path/to/model --optimized_spatial --optimized_temporal --diff --dec
+python experiments/run_humaneval.py --agent_nums 5 --mode FullConnected --batch_size 10 --num_iterations 10 --imp_per_iterations 5 --pruning_rate 0.20 --num_rounds 4 --llm_name /path/to/model --optimized_spatial --optimized_temporal --diff --dec
 ```
 
-
-
+Code framework based on [GPTSwarm](https://github.com/metauto-ai/GPTSwarm) and [AgentPrune](https://github.com/yanweiyue/AgentPrune).
