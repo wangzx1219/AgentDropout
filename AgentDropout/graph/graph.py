@@ -194,36 +194,6 @@ class Graph(ABC):
         for node_id in self.nodes.keys():
             self.nodes[node_id].add_successor(self.decision_node)
 
-    # def connect_decision_node_dec(self, i):
-    #     # # 获取所有节点的 ID
-    #     # node_ids = list(self.nodes.keys())
-        
-    #     # # 如果 i 大于节点总数，则跳过所有节点
-    #     # if i >= len(node_ids):
-    #     #     return
-        
-    #     # # 随机选择 i 个节点跳过
-    #     # skip_nodes = random.sample(node_ids, i)
-        
-    #     # # 遍历所有节点，跳过被选中的节点
-    #     # for node_id, mask in node_ids:
-    #     #     if node_id not in skip_nodes:
-    #     #         self.nodes[node_id].add_successor(self.decision_node)
-    #     log_probs = [torch.tensor(0.0, requires_grad=self.dec_1)]
-    #     for node_id, mask, prob_logit in zip(self.nodes.keys(), self.decision_masks, self.decision_logits):
-    #         if mask == 0:
-    #             continue
-    #         elif mask == 1 and self.dec_1==False:
-    #             self.nodes[node_id].add_successor(self.decision_node)
-    #             continue
-    #         prob = torch.sigmoid(prob_logit / 1.0)
-    #         if torch.rand(1) < prob:
-    #             self.nodes[node_id].add_successor(self.decision_node)
-    #             log_probs.append(torch.log(prob))
-    #         else:
-    #             log_probs.append(torch.log(1 - prob))
-        
-    #     return torch.sum(torch.stack(log_probs))
 
 
     def construct_spatial_connection(self, temperature: float = 1.0, threshold: float = None,): # temperature must >= 1.0
