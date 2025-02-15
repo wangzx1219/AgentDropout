@@ -7,8 +7,8 @@
 **Create and install the environment**
 
 ```shell
-conda create -n agentprune python=3.10
-conda activate agentprune
+conda create -n myenv python=3.10
+conda activate myenv
 pip install -r requirements.txt
 ```
 
