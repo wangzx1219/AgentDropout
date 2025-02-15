@@ -10,10 +10,10 @@ We propose **AgentDropout**, a novel topology optimization method for Multi-agen
 
 | Directory       | Contents              |
 | --------------- | --------------------- |
-| `dataset/`      | Experimental data     |
+| `datasets/`     | Experimental data     |
 | `AgentDropout/` | Main codes            |
 | `experiments/`  | Test scripts          |
-| `results/`      | Few samples of output |
+| `result/`       | Few samples of output |
 
 ### Requirements
 
@@ -43,7 +43,7 @@ api_key = API_KEYS
 base_url = "http://localhost:6789/v1"
 ```
 
-Download Datasets
+Prepare data
 
 Download datasets from [Huggingface]((https://huggingface.co/)). And put them in `datasets/`.
 
