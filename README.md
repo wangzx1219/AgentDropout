@@ -43,9 +43,7 @@ api_key = API_KEYS
 base_url = "http://localhost:6789/v1"
 ```
 
-Prepare data
-
-Download datasets from [Huggingface]((https://huggingface.co/)). And put them in `datasets/`.
+Prepare data from [Huggingface](https://huggingface.co/). And put them in `datasets/`.
 
 ### Quick Start
 
