@@ -1,12 +1,23 @@
 # AgentDropout
 
+### About Method
+
 We propose **AgentDropout**, a novel topology optimization method for Multi-agent system with domain transferability and structure robustness. AgentDropout dynamically adjusts the participating agents and communication links among agents in each round, allowing for more flexible and adaptive team configurations. 
 
 <img src="image/README/main.png" alt="main" style="zoom: 33%;" />
 
-## Qucik Start
+### File Structure
 
-**Create and install the environment**
+| Directory       | Contents              |
+| --------------- | --------------------- |
+| `dataset/`      | Experimental data     |
+| `AgentDropout/` | Main codes            |
+| `experiments/`  | Test scripts          |
+| `results/`      | Few samples of output |
+
+### Requirements
+
+Install anaconda environment
 
 ```shell
 conda create -n myenv python=3.10
@@ -14,14 +25,14 @@ conda activate myenv
 pip install -r requirements.txt
 ```
 
-**Set url and API keys in** `AgentDropout/llm/gpt_chat`
+Set url and API keys in `AgentDropout/llm/gpt_chat`
 
 ```python
 MINE_BASE_URL = ""
 MINE_API_KEYS = ""
 ```
 
-**Or use vllm for local deployment**
+Or use vllm for local deployment
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 vllm serve /path/to/model --dtype auto --api-key API_KEYS --port 6789
@@ -32,24 +43,16 @@ api_key = API_KEYS
 base_url = "http://localhost:6789/v1"
 ```
 
-**Download Datasets**
+Download Datasets
 
-Download MMLU, AQuA, MultiArith, SVAMP, HumanEval and GSM8K datasets from [Huggingface]((https://huggingface.co/)). And put them in `datasets`.
+Download datasets from [Huggingface]((https://huggingface.co/)). And put them in `datasets/`.
 
-**Run AgentDropout**
+### Quick Start
+
+Run AgentDropout on GSM8K, the same as other datasets: 
 
 ```shell
-python experiments/run_mmlu.py --agent_nums 5 --mode FullConnected --batch_size 40 --num_iterations 2 --imp_per_iterations 1 --pruning_rate 0.20 --num_rounds 2 --llm_name /path/to/model --optimized_spatial --optimized_temporal --diff --dec
-
-python experiments/run_gsm8k.py --agent_nums 5 --mode FullConnected --batch_size 40 --num_iterations 2 --imp_per_iterations 1 --pruning_rate 0.20 --num_rounds 2 --llm_name /path/to/model --optimized_spatial --optimized_temporal --diff --dec
-
-python experiments/run_aqua.py --agent_nums 5 --mode FullConnected --batch_size 40 --num_iterations 2 --imp_per_iterations 1 --pruning_rate 0.20 --num_rounds 2 --llm_name /path/to/model --optimized_spatial --optimized_temporal --diff --dec
-
-python experiments/run_multiarith.py --agent_nums 5 --mode FullConnected --batch_size 60 --num_iterations 2 --imp_per_iterations 1 --pruning_rate 0.20 --num_rounds 2 --llm_name /path/to/model --optimized_spatial --optimized_temporal --diff --dec
-
-python experiments/run_svamp.py --agent_nums 5 --mode FullConnected --batch_size 60 --num_iterations 2 --imp_per_iterations 1 --pruning_rate 0.20 --num_rounds 2 --llm_name /path/to/model --optimized_spatial --optimized_temporal --diff --dec
-
-python experiments/run_humaneval.py --agent_nums 5 --mode FullConnected --batch_size 10 --num_iterations 10 --imp_per_iterations 5 --pruning_rate 0.20 --num_rounds 4 --llm_name /path/to/model --optimized_spatial --optimized_temporal --diff --dec
+python experiments/run_gsm8k.py --agent_nums 5 --mode FullConnected --batch_size 40 --num_iterations 2 --imp_per_iterations 1 --pruning_rate 0.20 --num_rounds 2 --llm_name /data/models/Meta-Llama-3-8B-Instruct --optimized_spatial --optimized_temporal --diff --dec
 ```
 
 Code framework based on [GPTSwarm](https://github.com/metauto-ai/GPTSwarm) and [AgentPrune](https://github.com/yanweiyue/AgentPrune).
