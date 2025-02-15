@@ -89,7 +89,7 @@ async def achat_deepseek(model: str, msg: List[Dict],):
 @retry(wait=wait_fixed(2), stop=stop_after_attempt(5))
 async def achat_llama(model: str, msg: List[Dict]):
     # print(111111111111)
-    api_kwargs = dict(api_key = "token-abc123", base_url = "http://localhost:6305/v1")
+    api_kwargs = dict(api_key = "API-KEY", base_url = "http://localhost:6789/v1")
     aclient = AsyncOpenAI(**api_kwargs)
     try:
         async with async_timeout.timeout(1000):
@@ -102,7 +102,6 @@ async def achat_llama(model: str, msg: List[Dict]):
             return response_message
 
     except Exception as e:
-        # 记录日志或处理异常
         print(f"Error in achat_llama: {e}")
         # raise
     
