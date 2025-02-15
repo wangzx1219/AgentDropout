@@ -137,7 +137,6 @@ async def main():
                     frob_loss_s = frobenius_norm(spatial_matrix_fixed, spatial_matrix_train)
                     frob_loss_t = frobenius_norm(temporal_matrix_fixed, temporal_matrix_train)
                 else:
-                    # 假设 nuclear_norm 和 frobenius_norm 是计算核范数和 Frobenius 范数的函数
                     # loss_s = sum(nuclear_norm(matrix) for matrix in spatial_matrix_train)
                     # loss_t = sum(nuclear_norm(matrix) for matrix in temporal_matrix_train)
                     # frob_loss_s = sum(frobenius_norm(spatial_matrix_fixed, matrix) for matrix in spatial_matrix_train)
