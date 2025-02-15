@@ -59,20 +59,8 @@ def math_data_process(dataset):
     return list_data_dict
 
 def check_answer_position(true_answer, raw_answer):
-    """
-    检查原始回答中是否包含指定关键词，并验证正确答案是否出现在关键词之后
-    
-    参数：
-    true_answer (str): 正确答案
-    raw_answer (str): 模型生成的原始回答
-    
-    返回：
-    tuple: (是否包含关键词, 答案是否在关键词后)
-    """
-    # 定义匹配模式（保持大小写敏感）
+
     pattern = re.compile(r'(The answer is |the answer is )')
-    
-    # 查找所有匹配项
     matches = list(pattern.finditer(raw_answer))
     has_keyword = len(matches) > 0
     
@@ -80,25 +68,21 @@ def check_answer_position(true_answer, raw_answer):
         return False
     
     try:
-        # 取最后一个匹配项
         last_match = matches[-1]
         start, end = last_match.span()
         after_part = raw_answer[end:].strip()
-        
-        # 进行标准化处理（可选）
+
         normalized_after = after_part.lower().replace(" ", "").rstrip('.').rstrip('/')
         normalized_true = str(true_answer).lower().replace(" ", "")
         
-        # 检查包含关系（可根据需要调整匹配逻辑）
         is_correct = (
-            str(true_answer) in after_part or        # 原始包含检查
-            normalized_true in normalized_after      # 标准化后检查
+            str(true_answer) in after_part or  
+            normalized_true in normalized_after      
         )
         
         return is_correct
         
     except Exception as e:
-        # 异常处理（如空匹配等情况）
         return False
 
 def gsm_get_predict(pred_str):
@@ -168,7 +152,6 @@ def gsm_get_predict(pred_str):
         return matches[-1] if matches else '0'
 
 def _strip_string_math(string):
-    # 保留原有的清理逻辑，但确保不删除负号等必要字符
     string = string.replace("\n", "").replace("\\!", "").replace("\\\\", "\\")
     string = string.replace("tfrac", "frac").replace("dfrac", "frac")
     string = string.replace("\\left", "").replace("\\right", "")
@@ -634,10 +617,6 @@ def strip_string(string):
 
     return string
 
-# def remove_trailing_dot(text: str) -> str:
-#     if text.endswith('.'):
-#         return text[:-1]  # 删除最后一个字符（句点）
-#     return text  # 如果没有句点，返回原字符串
+
 def remove_trailing_dot(text: str) -> str:
-    # 删除末尾的句点和换行符
     return text.rstrip('.\n')
