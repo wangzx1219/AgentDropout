@@ -2,7 +2,7 @@
 
 We propose **AgentDropout**, a novel topology optimization method for Multi-agent system with domain transferability and structure robustness. AgentDropout dynamically adjusts the participating agents and communication links among agents in each round, allowing for more flexible and adaptive team configurations. 
 
-![main](image/README/main.png)
+<img src="image/README/main.png" alt="main" style="zoom: 33%;" />
 
 ## Qucik Start
 
