@@ -1,10 +1,10 @@
 from typing import List,Any,Dict
 
-from AgentPrune.graph.node import Node
-from AgentPrune.agents.agent_registry import AgentRegistry
-from AgentPrune.llm.llm_registry import LLMRegistry
-from AgentPrune.prompt.prompt_set_registry import PromptSetRegistry
-from AgentPrune.tools.coding.python_executor import execute_code_get_return
+from AgentDropout.graph.node import Node
+from AgentDropout.agents.agent_registry import AgentRegistry
+from AgentDropout.llm.llm_registry import LLMRegistry
+from AgentDropout.prompt.prompt_set_registry import PromptSetRegistry
+from AgentDropout.tools.coding.python_executor import execute_code_get_return
 from datasets.aqua_dataset import aqua_get_predict
 
 @AgentRegistry.register('MathSolver_aqua')

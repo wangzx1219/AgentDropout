@@ -2,11 +2,11 @@ from typing import List,Any,Dict
 import re
 import asyncio
 
-from AgentPrune.graph.node import Node
-from AgentPrune.agents.agent_registry import AgentRegistry
-from AgentPrune.llm.llm_registry import LLMRegistry
-from AgentPrune.prompt.prompt_set_registry import PromptSetRegistry
-from AgentPrune.tools.search.wiki import search_wiki_main
+from AgentDropout.graph.node import Node
+from AgentDropout.agents.agent_registry import AgentRegistry
+from AgentDropout.llm.llm_registry import LLMRegistry
+from AgentDropout.prompt.prompt_set_registry import PromptSetRegistry
+from AgentDropout.tools.search.wiki import search_wiki_main
 
 def find_strings_between_pluses(text):
     return re.findall(r'\@(.*?)\@', text)
