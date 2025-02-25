@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 
-from AgentPrune.utils.log import logger
-from AgentPrune.environment.tools.coding.python_executor import PyExecutor
-from AgentPrune.environment.tools.coding.executor_types import Executor
+from AgentDropout.utils.log import logger
+from AgentDropout.environment.tools.coding.python_executor import PyExecutor
+from AgentDropout.environment.tools.coding.executor_types import Executor
 
 EXECUTOR_MAPPING = {
     "py": PyExecutor,
