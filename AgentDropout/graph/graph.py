@@ -5,8 +5,8 @@ import numpy as np
 import torch
 import asyncio
 
-from AgentPrune.graph.node import Node
-from AgentPrune.agents.agent_registry import AgentRegistry
+from AgentDropout.graph.node import Node
+from AgentDropout.agents.agent_registry import AgentRegistry
 import random
 
 class Graph(ABC):
