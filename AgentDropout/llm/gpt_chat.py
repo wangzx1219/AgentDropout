@@ -8,10 +8,10 @@ from openai import AsyncOpenAI
 import async_timeout
 from transformers import AutoTokenizer
 
-from AgentPrune.llm.format import Message
-from AgentPrune.llm.price import cost_count, cost_count_llama3, cost_count_deepseek
-from AgentPrune.llm.llm import LLM
-from AgentPrune.llm.llm_registry import LLMRegistry
+from AgentDropout.llm.format import Message
+from AgentDropout.llm.price import cost_count, cost_count_llama3, cost_count_deepseek
+from AgentDropout.llm.llm import LLM
+from AgentDropout.llm.llm_registry import LLMRegistry
 
 
 load_dotenv()

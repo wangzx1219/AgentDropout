@@ -1,7 +1,7 @@
 from typing import Optional
 from class_registry import ClassRegistry
 
-from AgentPrune.llm.llm import LLM
+from AgentDropout.llm.llm import LLM
 
 
 class LLMRegistry:

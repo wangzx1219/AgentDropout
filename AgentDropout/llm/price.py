@@ -1,4 +1,4 @@
-from AgentPrune.utils.globals import Cost, PromptTokens, CompletionTokens, Tokenizer, Deepseek_Tokenizer
+from AgentDropout.utils.globals import Cost, PromptTokens, CompletionTokens, Tokenizer, Deepseek_Tokenizer
 import tiktoken
 
 # GPT-4:  https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo

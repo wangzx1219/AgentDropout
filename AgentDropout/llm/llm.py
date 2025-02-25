@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List, Union, Optional
 
-from AgentPrune.llm.format import Message
+from AgentDropout.llm.format import Message
 
 
 class LLM(ABC):
