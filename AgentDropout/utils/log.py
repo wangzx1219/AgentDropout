@@ -5,7 +5,7 @@ import os
 import sys
 from pathlib import Path
 from loguru import logger
-from AgentPrune.utils.const import AgentPrune_ROOT
+from AgentDropout.utils.const import AgentPrune_ROOT
 
 def configure_logging(print_level: str = "INFO", logfile_level: str = "DEBUG") -> None:
     """

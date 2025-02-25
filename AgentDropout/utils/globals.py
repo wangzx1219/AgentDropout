@@ -42,5 +42,5 @@ class Tokenizer(Singleton):
 
 class Deepseek_Tokenizer(Singleton):
     def __init__(self, model):
-        self.tokenizer = AutoTokenizer.from_pretrained('/data/models/deepseek_v3_tokenizer', use_fast=True)
+        self.tokenizer = AutoTokenizer.from_pretrained('/path/to/deepseek_v3_tokenizer', use_fast=True)
         self.value = ""
