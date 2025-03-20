@@ -73,7 +73,7 @@ async def achat_deepseek(model: str, msg: List[Dict],):
     aclient = AsyncOpenAI(**api_kwargs)
     try:
         async with async_timeout.timeout(1000):
-            completion = await aclient.chat.completions.create(model=model,messages=msg,temperature=1.0,top_p=1.0)
+            completion = await aclient.chat.completions.create(model=model,messages=msg)
         # print(completion)
         response_message = completion.choices[0].message.content
         
