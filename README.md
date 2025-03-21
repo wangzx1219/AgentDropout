@@ -16,7 +16,6 @@ This repository releases the codes and data for the paper -- AgentDropout: Dynam
 - **[Requirements](#requirements)**
 - **[Quick Start](#start)**
 - **[Citation](#citation)**
-- **[Citation](#acknowledgments)**
 
 ## **🧠 About AgentDropout**<a name="about"></a>
 
