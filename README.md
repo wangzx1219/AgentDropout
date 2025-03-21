@@ -1,4 +1,6 @@
-# AgentDropout
+# AgentDropout: Dynamic Agent Elimination for Token-Efficient and High-Performance LLM-Based Multi-Agent Collaboration
+
+
 
 ### 🧠 About Method
 
