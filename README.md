@@ -1,23 +1,50 @@
-# AgentDropout: Dynamic Agent Elimination for Token-Efficient and High-Performance LLM-Based Multi-Agent Collaboration
+# AgentDropout
+
+This repository releases the codes and data for the paper -- AgentDropout: Dynamic Agent Elimination for Token-Efficient and High-Performance LLM-Based Multi-Agent Collaboration.
+
+<div align="center">
+    <img src="image/README/logo.png" width=200></img>
+    <p class="image-caption">AgentDropout: Dynamic Agent Elimination for Token-Efficient and High-Performance LLM-Based Multi-Agent Collaboration</p>
+</div>
+
+## **📣 News**
+
+## **🔗 Quick Links**
+
+- **[About AgentDropout](#about)**
+- **[File Structure](#structure)**
+- **[Requirements](#requirements)**
+- **[Quick Start](#start)**
+- **[Citation](#citation)**
+- **[Citation](#acknowledgments)**
+
+## **🧠 About AgentDropout**<a name="about"></a>
+
+<!-- **AgentDropout** is a novel topology optimization method for Multi-agent system with domain transferability and structure robustness. AgentDropout dynamically adjusts the participating agents and communication links among agents in each round, allowing for more flexible and adaptive team configurations.  -->
+**AgentDropout** is a novel topology optimization method for Multi-agent systems (MAS), inspired by the management theory that more flexible and adaptive team configurations can make teamwork more efficient and effective. AgentDropout dynamically identify and drop out the redundant agents and communication links in each interaction round of the MAS, allowing for higher token efficiency and task performance.
+It conducts two types of dropout:
+<!-- It abstracts the structures of MAS into communication graphs, with agents as nodes and the interactions between them as edges, and conduct two types of dropout: -->
+- **Node Dropout**: Remove agent nodes with the smallest trainable weighted degree to involve different responsible roles in different disscussion steps.
+- **Edge Dropout**: Remove interaction edges with the smallest task contribution to improve communication efficiency.
+
+<!-- <img src="image/README/main.png" alt="main" style="zoom: 33%;" /> -->
+<div align="center">
+    <img src="image/README/main.png"></img>
+    <p class="image-caption">The Frameword of AgentDropout</p>
+</div>
 
 
 
-### 🧠 About Method
-
-We propose **AgentDropout**, a novel topology optimization method for Multi-agent system with domain transferability and structure robustness. AgentDropout dynamically adjusts the participating agents and communication links among agents in each round, allowing for more flexible and adaptive team configurations. 
-
-<img src="image/README/main.png" alt="main" style="zoom: 33%;" />
-
-### 📂 File Structure
+## **📂 File Structure**<a name="structure"></a>
 
 | Directory       | Contents              |
 | --------------- | --------------------- |
-| `datasets/`     | Experimental data     |
-| `AgentDropout/` | Main codes            |
-| `experiments/`  | Test scripts          |
-| `result/`       | Few samples of output |
+| [`datasets/`](https://github.com/wangzx1219/AgentDropout/tree/main/datasets)     | Experimental data     |
+| [`AgentDropout/`](https://github.com/wangzx1219/AgentDropout/tree/main/AgentDropout) | Main codes            |
+| [`experiments/`](https://github.com/wangzx1219/AgentDropout/tree/main/experiments)  | Test scripts          |
+| [`result/`](https://github.com/wangzx1219/AgentDropout/tree/main/result)       | Few samples of output |
 
-### ⚙️ Requirements
+## **⚙️ Requirements**<a name="requirements"></a>
 
 1. **Environment Setup**:
 
@@ -49,7 +76,7 @@ base_url = "http://localhost:6789/v1"
 
 Prepare data from [Huggingface](https://huggingface.co/). And put them in `datasets/`.
 
-### 🚀 Quick Start
+## **🚀 Quick Start**<a name="start"></a>
 
 Run AgentDropout on GSM8K, the same as other datasets: 
 
@@ -69,12 +96,14 @@ python experiments/run_gsm8k.py \
   --dec
 ```
 
-### 📜 Citation
+## **📜 Citation**<a name="citation"></a>
 
 If you find this work useful, please cite:
 
 ```tex
 
 ```
+
+## **💡 Acknowledgments**<a name="acknowledgments"></a>
 
 Code framework based on [GPTSwarm](https://github.com/metauto-ai/GPTSwarm) and [AgentPrune](https://github.com/yanweiyue/AgentPrune).
