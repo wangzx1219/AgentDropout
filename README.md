@@ -8,6 +8,7 @@ This repository releases the codes and data for the paper -- AgentDropout: Dynam
 </div>
 
 ## **📣 News**
+- Our paper has been submitted to arXiv: [https://arxiv.org/abs/2503.18891](https://arxiv.org/abs/2503.18891)!
 
 ## **🔗 Quick Links**
 
@@ -100,7 +101,15 @@ python experiments/run_gsm8k.py \
 If you find this work useful, please cite:
 
 ```tex
-
+@misc{wang2025agentdropoutdynamicagentelimination,
+      title={AgentDropout: Dynamic Agent Elimination for Token-Efficient and High-Performance LLM-Based Multi-Agent Collaboration}, 
+      author={Zhexuan Wang and Yutong Wang and Xuebo Liu and Liang Ding and Miao Zhang and Jie Liu and Min Zhang},
+      year={2025},
+      eprint={2503.18891},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2503.18891}, 
+}
 ```
 
 ## **💡 Acknowledgments**<a name="acknowledgments"></a>
