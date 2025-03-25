@@ -8,7 +8,7 @@ This repository releases the codes and data for the paper -- AgentDropout: Dynam
 </div>
 
 ## **📣 News**
-- Our paper has been submitted to arXiv: [https://arxiv.org/abs/2503.18891](https://arxiv.org/abs/2503.18891)!
+- **[25/03/2025]** Our paper has been submitted to arXiv: [https://arxiv.org/abs/2503.18891](https://arxiv.org/abs/2503.18891)!
 
 ## **🔗 Quick Links**
 
