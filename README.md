@@ -78,7 +78,7 @@ Prepare data from [Huggingface](https://huggingface.co/). And put them in `datas
 
 ## **🚀 Quick Start**<a name="start"></a>
 
-Run AgentDropout on GSM8K, the same as other datasets: 
+Run AgentDropout on GSM8K (other datasets are similar): 
 
 ```shell
 python experiments/run_gsm8k.py \
