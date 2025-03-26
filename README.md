@@ -30,7 +30,7 @@ It conducts two types of dropout:
 <!-- <img src="image/README/main.png" alt="main" style="zoom: 33%;" /> -->
 <div align="center">
     <img src="image/README/main.png"></img>
-    <p class="image-caption">The Frameword of AgentDropout</p>
+    <p class="image-caption">The Framework of AgentDropout</p>
 </div>
 
 
