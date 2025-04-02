@@ -1,9 +1,9 @@
 from typing import Union, Dict, Any, List
 import itertools
 
-from AgentPrune.prompt.prompt_set import PromptSet
-from AgentPrune.prompt.prompt_set_registry import PromptSetRegistry
-from AgentPrune.prompt.common import get_combine_materials
+from AgentDropout.prompt.prompt_set import PromptSet
+from AgentDropout.prompt.prompt_set_registry import PromptSetRegistry
+from AgentDropout.prompt.common import get_combine_materials
 
 
 roles = itertools.cycle(['Knowlegable Expert',
