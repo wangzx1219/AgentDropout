@@ -115,27 +115,28 @@ If you find this work useful, please cite:
 
 ```tex
 @inproceedings{wang-etal-2025-agentdropout,
-    title = "{A}gent{D}ropout: Dynamic Agent Elimination for Token-Efficient and High-Performance {LLM}-Based Multi-Agent Collaboration",
-    author = "Wang, Zhexuan  and
+    title = {AgentDropout: Dynamic Agent Elimination for Token-Efficient and High-Performance LLM-Based Multi-Agent Collaboration},
+    author = {Wang, Zhexuan  and
       Wang, Yutong  and
       Liu, Xuebo  and
       Ding, Liang  and
       Zhang, Miao  and
       Liu, Jie  and
-      Zhang, Min",
-    editor = "Che, Wanxiang  and
+      Zhang, Min},
+    editor = {Che, Wanxiang  and
       Nabende, Joyce  and
       Shutova, Ekaterina  and
-      Pilehvar, Mohammad Taher",
-    booktitle = "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+      Pilehvar, Mohammad Taher},
+    booktitle = {Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
     month = jul,
-    year = "2025",
-    address = "Vienna, Austria",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2025.acl-long.1170/",
-    doi = "10.18653/v1/2025.acl-long.1170",
-    pages = "24013--24035",
-    ISBN = "979-8-89176-251-0"}
+    year = {2025},
+    address = {Vienna, Austria},
+    publisher = {Association for Computational Linguistics},
+    url = {https://aclanthology.org/2025.acl-long.1170/},
+    doi = {10.18653/v1/2025.acl-long.1170},
+    pages = {24013--24035},
+    ISBN = {979-8-89176-251-0}
+}
 ```
 
 ## **💡 Acknowledgments**<a name="acknowledgments"></a>
