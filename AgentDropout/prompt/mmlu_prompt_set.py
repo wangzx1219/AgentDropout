@@ -117,7 +117,7 @@ class MMLUPromptSet(PromptSet):
     
     @staticmethod
 #     def get_analyze_constraint(role):
-#         return ROLE_DESCRIPTION[role] if role in ROLE_DESCRIPTION.keys() else ""+ """
+#         return ROLE_DESCRIPTION[role] if role in ROLE_DESCRIPTION.keys() else """
 # I will ask you a question and 4 answers enumerated as A, B, C and D.
 # Only one answer out of the offered 4 is correct.
 # Using the reasoning from other agents as additional advice with critical thinking, can you give an updated answer?
@@ -128,7 +128,7 @@ class MMLUPromptSet(PromptSet):
 # """
     @staticmethod
     def get_analyze_constraint(role):
-        return ROLE_DESCRIPTION[role] if role in ROLE_DESCRIPTION.keys() else ""+ """
+        return ROLE_DESCRIPTION[role] if role in ROLE_DESCRIPTION.keys() else """
     I will ask you a question and 4 answers enumerated as A, B, C and D.
     Only one answer out of the offered 4 is correct.
     Using the reasoning from other agents as additional advice with critical thinking, can you give an updated answer?
