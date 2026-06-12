@@ -8,19 +8,41 @@ This repository releases the codes and data for the paper -- AgentDropout: Dynam
 </div>
 
 ## **📣 News**
-- **[16/05/2025]**  🎉🎉Our paper is accepted by [ACL 2025]!🎉🎉
+- **[27/05/2026]** 🚀🚀We release **AgentDropoutV2** for test-time information flow verification. Check out the [new repository](https://github.com/TonySY2/AgentDropoutV2) and [paper](https://arxiv.org/abs/2602.23258)!
+- **[16/05/2025]** 🎉🎉Our paper is accepted by [ACL 2025]!🎉🎉
 - **[25/03/2025]** Our paper has been submitted to arXiv: [https://arxiv.org/abs/2503.18891](https://arxiv.org/abs/2503.18891)!
 
 ## **🔗 Quick Links**
 
-- **[About AgentDropout](#about)**
+- **[Overview](#about)**
+  - **[AgentDropoutV2](#about_AgentDropoutV2)**
+  - **[AgentDropout](#about_AgentDropout)**
 - **[File Structure](#structure)**
 - **[Requirements](#requirements)**
 - **[Quick Start](#start)**
 - **[Citation](#citation)**
 
-## **🧠 About AgentDropout**<a name="about"></a>
+## **🧠 Overview**<a name="about"></a>
 
+### **AgentDropoutV2**: An online MAS information flow verification method (🔥New!)<a name="about_AgentDropoutV2"></a>
+
+AgentDropoutV2 is a test-time framework for improving information flow in multi-agent systems without retraining the base agents.
+Different from AgentDropoutV1 that eleminates all redundant and erronous information flow in advance during the offline optimization stage,
+AgentDropoutV2 inspects all information flows during runtime and makes every effort to correct errors before finally discarding them.
+Specifically, during MAS execution it:
+
+1. intercepts each agent output before broadcast,
+2. retrieves failure-driven indicators from an offline pool,
+3. audits the output and provides targeted rectification feedback,
+4. rejects unreleased outputs that still fail the audit threshold,
+5. falls back to the original MAS path when pruning would collapse the team.
+
+<div align="center">
+    <img src="image/README/main-v2.png"></img>
+    <p class="image-caption">The Framework of AgentDropoutV2</p>
+</div>
+
+### **AgentDropout**: An offline MAS topology optimization framework<a name="about_AgentDropout"></a>
 <!-- **AgentDropout** is a novel topology optimization method for Multi-agent system with domain transferability and structure robustness. AgentDropout dynamically adjusts the participating agents and communication links among agents in each round, allowing for more flexible and adaptive team configurations.  -->
 **AgentDropout** is a novel topology optimization method for Multi-agent systems (MAS), inspired by the management theory that more flexible and adaptive team configurations can make teamwork more efficient and effective. AgentDropout dynamically identify and drop out the redundant agents and communication links in each interaction round of the MAS, allowing for higher token efficiency and task performance.
 It conducts two types of dropout:
